@@ -1,0 +1,180 @@
+<doctype html>
+    <html>
+        <head>
+            <link href="C:/Users/Dennis/Documents/work/style.css"rel= "stylesheet" type="text/css"/>
+            <title>IMPLEMENTING BINARY SEARCH TREE IN C++</title>
+            <body >  
+                <div class="IMPLEMENTING BINARY SEARCH TREE IN C++">
+                    <p>IMPLEMENTING BINARY SEARCH TREE IN C++</p>
+                    <p>
+                        To create a BST in C++, we need to modify our Tree Node class in the preceding binary tree
+          discussion, Building a binary tree ADT. We need to add the Parent properties so that we can track 
+          the parent of each node. It will make things easier for us when we traverse the tree. The class 
+          should be as follows:
+                    </p>
+                    
+                </div>
+                <div class="banner">
+                    <div class="navbar">
+                     <img id="logo-header" src="pic 1.jpg" alt="LOGO" />
+</div>
+</div>
+           <div class="THINGS YOU CAN USE THE BINARY SEARCH TREE TO DO">
+               <p>THINGS YOU CAN USE THE BINARY SERACH TREE TO DO</p>
+               <P>
+                There are some operations used in the BST(Binary Search Tree) has and they are mentioned below:
+            <li>
+                • Insert(): is used to add new nodes to the current BST. If it’s the first time adding a node, then
+                the node inserted will be known as a root node.
+            </li>
+
+            <li>
+                • PrintTreeInOrder(): is used to print all the keys in the binary search tree. It is usually sorted
+                out from the smallest key to the largest key.
+            </li>
+
+             <li>
+                • Search(): is used to find/search for a given key in the binary search key. If the key exists it
+                returns TRUE, else it returns FALSE.
+            </li>
+
+            <li>
+                • FindMin() and FindMax(): is used to find the minimum and maximum key that exist in the
+                binary search tree.
+            </li>
+
+            <li>
+                • Successor() and Predecessor(): is used find the successor and predecessor of a given key.
+            </li>
+            <li>
+                • Remove(): is used to remove a given key in binary search tree.
+            </li>
+               </P>
+
+
+           </div class="INSERTING A NEW KEY IN A BST">
+           <P>INSERTING A NEW KEY IN A BST</P>
+           <P>
+                   Inserting a new key into the BTS is literally adding a new node based on the behaviour of 
+            the BTS. When we want to insert a key we compare it to the root node(if it doesn’t have a root 
+            beforehand , the newly inserted key becomes the root) and we check if it is smaller or greater 
+            current the root’s key. But if the given key is greater than the currently selected one, then go to the
+            right subtree. Else go to the left subtree if the given key is currently smaller than the currently 
+            selected node’s key. Then we keep checking until there is a node without a child in order to add a 
+            new node. Below is the implementation of the Insert() operation in C++.
+           </P>
+           <div class="banner">
+            <div class="navbar">
+             <img id="logo-header" src="pic 2 (2).jpg" alt="LOGO" />
+        </div>
+        <p>
+            As we can see in the preceding code, we need to pass the selected node
+         and a new key to the function. However, we will always pass the root node as the 
+         selected node when performing the Insert() operation, so we can invoke the 
+         preceding code with the following Insert() function:
+        </p>
+        <div class="banner">
+            <div class="navbar">
+             <img id="logo-header" src="pic 2.5.jpg" alt="LOGO" />
+        </div>
+        <p>
+            Based on the implementation of the Insert() operation, we can see that the time complexity
+         to insert a new key into the BST is O(h) where h is the height of the BST. Based on the 
+         implementation of the Insert() operation, we can see that the time complexity to insert a new key 
+         into the BST is O(1), which is the best case scenario. And, if we insert a new key into a skewed tree, 
+         the time complexity will be O(N), where N is the total number of keys in the BST, which is the worst 
+         case scenario.
+        </p>
+         </div>
+         <div class="TRAVERSING A BST IN ORDER">
+             <P>TRAVERSING A BST IN ORDER</P>
+             <P>
+                     We have successfully created a new BST and can insert a new key into it. Now, we need to 
+                implement the PrintTreeInOrder() operation, which will traverse the BST in order from the smallest 
+                key to the greatest key. To achieve this, we will go to the leftmost node and then to the rightmost 
+                node. The code should be as follows:
+             </P>
+             <div class="banner">
+                <div class="navbar">
+                 <img id="logo-header" src="pic 3.jpg" alt="LOGO" />
+            </div>
+            <p>
+                Since we will always search for a key from the root node, we can create another Search() function as
+            follows:
+            </p>
+            <div class="banner">
+                <div class="navbar">
+                 <img id="logo-header" src="pic 3.1.jpg" alt="LOGO" />
+            </div>
+            <p>
+                The time complexity of the PrintTreeInOrder() function will be O(N), where N is 
+            the total number of keys for both the best and the worst cases since it will always 
+            traverse to all keys.
+            </p>
+         </div>
+         <div class="FINDING OUT IF A KEY EXIST IN A BST">
+             <p>FINDING OUT IF A KEY EXIST IN A BST</p>
+             <p>
+                Suppose we have a BST and need to find out if a key exists in the BST. It’s quite 
+           easy to check whether a given key exists in a BST, since we just need to compare the 
+           given key with the current node. If the key is smaller than the current node’s key, we go 
+           to the left subtree, otherwise we go to the right subtree. We will do this until we find 
+           the key or when there are no more nodes to find. The implementation of 
+           the Search() operation should be as follows: 
+             </p>
+             <div class="banner">
+                <div class="navbar">
+                 <img id="logo-header" src="pic 4.jpg" alt="LOGO" />
+            </div>
+            <p>
+                Since we will always search for a key from the root node, we can create 
+            another Search() function as follows:
+            </p>
+            <div class="banner">
+                <div class="navbar">
+                 <img id="logo-header" src="pic 4.1.jpg" alt="LOGO" />
+            </div>
+            <p>
+                The time complexity to find out a key in the BST is O(h), where h is the height of the 
+         BST.If we find a key which lies in the root node, the time complexity will be O(1), which 
+         is the best case. If we search for a key in a skewed tree, the time complexity will be 
+         O(N), where N is the total number of keys in the BST, which is the worst case.
+
+            </p>
+         </div>
+         <div class="RETRIEVING MAXIMUM AND MINIMUM KEY VALUES">
+             <p>RETRIEVING MAXIMUM AND MINIMUM KEY VALUES</p>
+           <p>
+        Finding out the minimum and maximum key values in a BST is also quite simple. To get a minimum key value, 
+     we just need to go to the leftmost node and get the key value. On the contrary, we just need to go 
+     to the rightmost node and we will find the maximum key value. The following is the implementation of 
+     the FindMin() operation to retrieve the minimum key value, and the FindMax() operation to retrieve 
+     the maximum key value: 
+           </p>
+           <div class="banner">
+            <div class="navbar">
+             <img id="logo-header" src="pic 5.jpg" alt="LOGO" />
+        </div>
+        <p>
+            We return -1 if we cannot find the minimum or maximum value in the tree, since we assume that 
+         the tree can only  have a positive integer. If we intend to store the negative integer as well, 
+         we need to modify the function’s implementation, for instance, by returning NULL if no minimum or 
+         maximum values are found. As usual, we will always find the minimum and maximum key values from the 
+         root node, so we can invoke the preceding operations as follows:
+        </p>
+        <div class="banner">
+            <div class="navbar">
+             <img id="logo-header" src="pic 5.1.jpg" alt="LOGO" />
+        </div>
+        <p>
+            Similar to the Search() operation, the time complexity of the FindMin() and FindMax() operations 
+         is O(h), where h is the height of the BST. However, if we find the maximum key value in a skewed 
+         left BST, the time complexity will be O(1), which is the best case, since it doesn’t have any 
+         right subtree. This also happens if we find the minimum key value in a skewed right BST. 
+         The worst case will appear if we try to find the minimum key value in a skewed left BST or try to 
+         find the maximum key value in a skewed right BST, since the time complexity will be O(N).
+        </p>
+         </div>
+            </body>
+        </head>
+    </html>
